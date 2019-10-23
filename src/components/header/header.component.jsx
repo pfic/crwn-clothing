@@ -8,7 +8,7 @@ export default function Header() {
     return (
       <div className="header">
         <Link to="/">
-          <Logo className="logo-container" />>
+          <Logo className="logo-container" />
         </Link>
         <div className="options">
           <Link className='option' to='/shop'>Shop</Link>
