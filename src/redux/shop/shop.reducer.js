@@ -11,4 +11,4 @@ const shopReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default shopReducer
+export default shopReducer;
