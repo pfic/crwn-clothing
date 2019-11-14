@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from "redux-saga/effects";
+import { takeLatest, call, put } from "redux-saga/effects";
 import {
   firestore,
   convertCollectionsSnapshotToMap
@@ -24,7 +24,8 @@ function* fetchCollectionAsync() {
 }
 
 export function* fetchCollectionsStart() {
-  yield takeEvery(
+  yield takeLatest(
+    //This is where we ar elistening for the calls. And we create a new generator function every time we hear the call.
     ShopActionTypes.FETCH_COLLECTIONS_START,
     fetchCollectionAsync
   );
