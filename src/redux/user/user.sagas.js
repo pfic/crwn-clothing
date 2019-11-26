@@ -90,7 +90,6 @@ export function* emailSignUpStart({
 
     yield createUserProfileDocument(user, { displayName });
     yield put(emailSignUpSuccess(user));
-    //yield getSnapshotFromUserAuth(user);
   } catch (error) {
     yield put(emailSignUpFailure(error.message));
   }
@@ -101,10 +100,7 @@ export function* onEmailSignUpStart() {
 }
 
 export function* emailSignUpLogin({ payload: user }) {
-  //Code to start the sign up here.
-
   try {
-    console.log("Got to the right place.");
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
     yield put(signInFailure(error.message));

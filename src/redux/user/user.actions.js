@@ -38,6 +38,7 @@ export const emailSignUpStart = (userInfo) => ({
   payload: userInfo
 })
 
+//This is suggested to be split out into multiple fields to make it more clear what the function is actually expecting. 
 export const emailSignUpSuccess = (user) => ({
   type: UserActionTypes.EMAIL_SIGN_UP_SUCCESS,
   payload: user
